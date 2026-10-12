@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quiz-container {
+    background: white;
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 21px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 13px;
+    text-align: left;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option-btn:hover:not(:disabled) {
+    background: #f0f2ff;
+    border-color: #667eea;
+}
+
+.option-btn.correct {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.option-btn.wrong {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+}
+
+#feedback {
+    margin-top: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+#next-btn,
+#restart-btn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#next-btn:hover:not(:disabled),
+#restart-btn:hover {
+    background: #4c5fd5;
+}
+
+#next-btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+#result-screen {
+    text-align: center;
+}
+
+#result-screen h2 {
+    margin-bottom: 20px;
+}
+
+#final-score {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#final-feedback {
+    color: #555;
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        padding: 22px;
+    }
+
+    #question {
+        font-size: 19px;
+    }
+}
